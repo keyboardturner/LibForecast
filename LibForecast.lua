@@ -18,6 +18,7 @@ LibForecast.WeatherType = {
     Snow = 2,
     Sandstorm = 3,
     Miscellaneous = 4,
+    Firestorm = 5, -- unsure on this weather type just yet
     Unknown = -1,
 };
 
