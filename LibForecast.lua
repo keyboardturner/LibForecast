@@ -5,7 +5,7 @@ local CallbackHandler = LibStub:GetLibrary("CallbackHandler-1.0");
 ---@field private frame Frame
 ---@field private callbacks CallbackHandlerRegistry
 ---@field private weatherInfo LibForecast1.WeatherInfo
-local LibForecast = LibStub:NewLibrary("LibForecast-1.0", 5);
+local LibForecast = LibStub:NewLibrary("LibForecast-1.0", 6);
 
 if not LibForecast then
     return;
@@ -119,6 +119,8 @@ local function HasWeatherChanged(old, new)
     elseif old.type ~= new.type then
         return true;
     elseif old.intensity ~= new.intensity then
+        return true;
+    elseif old.recordID ~= new.recordID then
         return true;
     else
         return false;
