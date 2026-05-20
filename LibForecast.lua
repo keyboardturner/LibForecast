@@ -120,6 +120,8 @@ local function HasWeatherChanged(old, new)
         return true;
     elseif old.intensity ~= new.intensity then
         return true;
+    elseif old.recordID ~= new.recordID then
+        return true;
     else
         return false;
     end
